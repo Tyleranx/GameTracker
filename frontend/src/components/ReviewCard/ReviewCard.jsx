@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import StarRating from '../StarRating/StarRating'; // Reutilizamos el componente
+import StarRating from '../StarRating/StarRating'; 
 import './ReviewCard.css';
 
 const ReviewCard = ({ review }) => {
@@ -15,7 +15,8 @@ const ReviewCard = ({ review }) => {
         <img 
           src={review.game.coverImage} 
           alt={review.game.title} 
-          className="review-card-image" 
+          className="review-card-image"
+          loading="lazy" /* agregado: mejora de rendimiento sin tocar funcionalidad */
         />
       </Link>
       <div className="review-card-info">
