@@ -1,6 +1,7 @@
 /* src/components/HeroCarousel.css */
 
 .hero-carousel-wrapper {
+  position: relative;
   width: 100%;
   max-width: 1400px; /* Centra el carrusel y le da un ancho máximo */
   margin: 2rem auto;
@@ -18,6 +19,7 @@
 
 /* Contenido de cada slide */
 .carousel-slide-content {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
@@ -27,9 +29,18 @@
 
 .carousel-image {
   width: 100%;
-  height: 100%;
-  object-fit: fill;  /*Asegura que la imagen cubra el área sin distorsionarse */
+  height: 420px;
+  object-fit: cover;  /*Asegura que la imagen cubra el área sin distorsionarse */
   display: block; 
+}
+
+/* Gradiente sutil para legibilidad del contenido encima del banner */
+.carousel-slide-content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.14) 0%, rgba(0,0,0,0) 40%);
+  pointer-events: none;
 }
 
 /* Estilos para la paginación (los puntitos de abajo) */
