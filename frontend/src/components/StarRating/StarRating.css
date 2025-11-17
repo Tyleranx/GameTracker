@@ -1,15 +1,22 @@
 /* src/components/StarRating/StarRating.css */
 .star-rating {
-  display: flex;
+  display: inline-flex;
+  gap: 4px;
   align-items: center;
-  gap: 0.1rem; /* Pequeño espacio entre estrellas */
+  line-height: 1;
+  font-size: 1.15rem;
 }
 
 .star {
-  color: #FFD700; /* Color dorado */
-  font-size: 1.2rem; /* Tamaño de las estrellas */
+  transition: transform 120ms ease, color 120ms ease;
+  display: inline-block;
 }
 
-.star.empty {
-  color: #ccc; /* Color para estrellas vacías */
+.star:hover {
+  transform: scale(1.15);
 }
+
+/* estados */
+.star.filled { color: #ffc107; }
+.star.half   { color: #ffc107; opacity: 0.95; }
+.star.empty  { color: #e4e5e9; }
