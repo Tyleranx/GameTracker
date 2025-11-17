@@ -3,43 +3,41 @@
 .popular-games-container {
   max-width: 1200px;
   margin: 4rem auto;
-  padding: 0 2rem;
+  padding: 2rem 1rem;
+  background: linear-gradient(180deg, #fafafa 0%, #fff 100%);
 }
 
 .popular-title {
   font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 2rem;
-  color: #333;
+  margin: 0 0 1rem 0;
+  color: #222;
 }
 
 .popular-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Columna izq. el doble que la der. (2/3 y 1/3) */
-  gap: 1.5rem;
+  grid-template-columns: 1fr 320px;
+  gap: 1rem;
+  align-items: start;
 }
 
 /* Estilos para todas las tarjetas */
 .game-card {
-  background-color: #f9f9f9;
-  border-radius: 8px;
+  background: #fff;
+  border-radius: 10px;
   overflow: hidden; /* Para que la imagen respete los bordes */
   border: 1px solid #eee;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.card-image-container {
-  line-height: 0; /* Corrige espacio extra de la imagen */
-}
-
-.game-card img {
+.game-card .card-image-container img {
   width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
+  display: block;
 }
 
 .card-info {
-  padding: 1rem;
+  padding: 0.7rem;
 }
 
 .card-info h3 {
@@ -90,4 +88,10 @@
 
 .small-card:first-child .card-info {
   display: none; /* Oculta el div de info si no se usa */
+}
+
+@media (max-width: 880px) {
+  .popular-grid {
+    grid-template-columns: 1fr;
+  }
 }
