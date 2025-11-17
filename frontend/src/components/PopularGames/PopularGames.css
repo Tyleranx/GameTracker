@@ -1,0 +1,93 @@
+/* src/components/PopularGames/PopularGames.css */
+
+.popular-games-container {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.popular-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Columna izq. el doble que la der. (2/3 y 1/3) */
+  gap: 1.5rem;
+}
+
+/* Estilos para todas las tarjetas */
+.game-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden; /* Para que la imagen respete los bordes */
+  border: 1px solid #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.card-image-container {
+  line-height: 0; /* Corrige espacio extra de la imagen */
+}
+
+.game-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 1rem;
+}
+
+.card-info h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #222;
+  margin-bottom: 0.25rem;
+}
+
+.card-info p {
+  font-size: 0.9rem;
+  color: #777;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.card-info span {
+  font-size: 0.8rem;
+  color: #555;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* --- Estilos específicos del layout --- */
+
+.large-card .card-image-container {
+  /* La imagen grande es más alta */
+  height: 400px; /* Ajusta esta altura si es necesario */
+}
+
+.small-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Espacio entre Mario Kart y FC 25 */
+}
+
+.small-card .card-image-container {
+  /* Imágenes más pequeñas */
+  height: 192px; /* Ajusta esta altura (aprox. la mitad de la grande - gap) */
+}
+
+/* Estilos para la tarjeta de Mario Kart que no tiene texto */
+.small-card:first-child .card-image-container {
+  height: 100%; /* Ocupa toda la tarjeta si no hay texto */
+}
+
+.small-card:first-child .card-info {
+  display: none; /* Oculta el div de info si no se usa */
+}

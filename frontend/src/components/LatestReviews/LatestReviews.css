@@ -1,0 +1,30 @@
+.latest-reviews-section {
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.latest-reviews-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.review-swiper-slide {
+  width: 220px; /* Debe coincidir con el ancho de ReviewCard */
+}
+
+/* Estilos para las flechas de Swiper */
+.reviews-swiper-container .swiper-button-next,
+.reviews-swiper-container .swiper-button-prev {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
+.reviews-swiper-container .swiper-button-next::after,
+.reviews-swiper-container .swiper-button-prev::after {
+  font-size: 1.5rem;
+}

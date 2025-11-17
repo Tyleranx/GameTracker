@@ -1,0 +1,199 @@
+/* --- 1. Estilos Generales del Navbar (Layout Nuevo + Colores Viejos) --- */
+.navbar {
+  background-color: #7e76763d; /* Tu color original */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(5px); /* Un toque moderno extra para ese fondo transparente */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  max-width: 1400px;
+  padding: 1rem 3rem; /* Tu padding original */
+}
+
+/* --- 2. Logo --- */
+.navbar-logo {
+  color: rgb(36, 35, 35); /* Tu color original */
+  font-size: 1.5rem; /* Tu tamaño original */
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* --- 3. Menú y Enlaces --- */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-item {
+  color: #2b2929; /* Tu color original */
+  text-decoration: none;
+  font-size: 1rem; /* Tu tamaño original */
+  font-weight: 500;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: rgb(97, 96, 96); /* Tu hover original */
+  text-decoration: underline; /* Tu decoración original */
+}
+
+.nav-item.active {
+  color: rgb(0, 0, 0); /* Negro puro para la página activa */
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* --- 4. Botones Especiales --- */
+.btn-login {
+  /* Estilo simple para login que combine con tus links */
+  color: #2b2929;
+  border: 1px solid #2b2929;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+.btn-login:hover {
+  background-color: #2b2929;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-logout {
+  background-color: #d9534f; /* Tu rojo original */
+  color: white !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-logout:hover {
+  background-color: #c9302c; /* Tu hover rojo original */
+  text-decoration: none;
+}
+
+/* --- 5. Buscador (Adaptado a tu estilo) --- */
+.search-form {
+  display: flex;
+  align-items: center;
+  /* Quitamos el fondo blanco del form para que se vea solo el input como antes */
+}
+
+.search-input {
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 4px 0 0 4px; /* Bordes redondeados a la izquierda */
+  background-color: #eeeeee; /* Tu fondo claro original */
+  color: #0a0a0a;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.search-btn {
+  background-color: #eeeeee; /* Mismo fondo que el input */
+  border: none;
+  padding: 0.6rem;
+  border-radius: 0 4px 4px 0; /* Bordes redondeados a la derecha */
+  cursor: pointer;
+  color: #2b2929;
+  display: flex;
+  align-items: center;
+}
+.search-btn:hover {
+  background-color: #dcdcdc;
+}
+
+/* --- 6. Icono Hamburguesa (Móvil) --- */
+.menu-icon {
+  display: none;
+  color: rgb(36, 35, 35); /* Color oscuro para que se vea en tu fondo gris */
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* --- 7. RESPONSIVE (Móvil) --- */
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    /* Fondo blanco o gris muy claro para el menú desplegable móvil */
+    background-color: #f4f4f4; 
+    padding: 2rem 0;
+    border-bottom: 2px solid #ccc;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .nav-item {
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+    display: block;
+    color: #333; /* Texto oscuro en móvil */
+  }
+
+  .nav-item:hover {
+    background-color: #e0e0e0;
+    text-decoration: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .search-form {
+    width: 80%;
+    justify-content: center;
+  }
+  
+  .search-input {
+    width: 100%;
+    border-radius: 4px; /* En móvil lo redondeamos completo */
+  }
+  .search-btn {
+    background: transparent; /* En móvil quizás el botón al lado estorba visualmente */
+    margin-left: -30px; /* Truco para meter la lupa dentro del input */
+  }
+}

@@ -1,0 +1,10 @@
+.search-results-container { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; }
+.search-msg { text-align: center; margin-top: 4rem; font-size: 1.5rem; color: #666; }
+.results-section { margin-bottom: 3rem; }
+.results-section h3 { border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+.results-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1.5rem; }
+
+
+.search-review-item { background: #f9f9f9; padding: 1rem; margin-bottom: 1rem; border-radius: 5px; }
+.review-game-link { display: block; color: #007bff; text-decoration: none; margin-bottom: 0.5rem; }
+.search-review-item span { font-size: 0.8rem; color: #888; display: block; margin-top: 0.5rem; text-align: right; }

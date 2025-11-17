@@ -1,0 +1,11 @@
+/* src/components/StarRatingInput/StarRatingInput.css */
+.star-rating-input {
+  display: flex;
+}
+.star-rating-input input[type='radio'] {
+  display: none; /* Oculta los botones de radio */
+}
+.star-rating-input .star {
+  cursor: pointer;
+  transition: color 0.2s;
+}

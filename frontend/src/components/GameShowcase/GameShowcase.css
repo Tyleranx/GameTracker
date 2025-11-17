@@ -1,0 +1,87 @@
+/* src/components/GameShowcase/GameShowcase.css */
+
+.showcase-container {
+  max-width: 1200px; /* Limita el ancho para centrarlo */
+  margin: 4rem auto; /* Espacio arriba/abajo y centrado horizontal */
+  padding: 0 2rem; /* Espacio en los lados */
+  display: flex;
+  flex-direction: column;
+  gap: 4rem; /* Espacio entre la fila RPG y la fila Indie */
+}
+
+.showcase-item {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  gap: 3rem; /* Espacio entre la info y la imagen */
+}
+
+/* Invierte la fila que tenga la clase 'reverse' */
+.showcase-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.showcase-info {
+  flex: 1; /* Hace que la info ocupe la mitad del espacio */
+}
+
+.showcase-image-container {
+  flex: 1; /* Hace que la imagen ocupe la otra mitad */
+  border: 4px solid #e0e0e0; /* El borde gris claro de tu maqueta */
+  border-radius: 4px;
+  line-height: 0; /* Corrige espacio extra debajo de la imagen */
+}
+
+.showcase-image-container img {
+  width: 100%;
+  display: block;
+}
+
+.showcase-category {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-transform: uppercase; /* Mayúsculas como en la maqueta */
+  color: #333;
+}
+
+.showcase-description {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.showcase-buttons {
+  display: flex;
+  gap: 1rem; /* Espacio entre botones */
+}
+
+/* Estilos de botones genéricos */
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.btn-dark {
+  background-color: #222;
+  color: white;
+}
+
+.btn-dark:hover {
+  background-color: #000;
+}
+
+.btn-light {
+  background-color: #e9e9e9;
+  color: #444;
+}
+
+.btn-light:hover {
+  background-color: #dcdcdc;
+}

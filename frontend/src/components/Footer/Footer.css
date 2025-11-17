@@ -1,0 +1,110 @@
+/* src/components/Footer/Footer.css */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 5rem; /* Bastante padding como en la maqueta */
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0; /* La línea superior fina */
+  color: #333;
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-sitename {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.5rem; /* Espacio entre íconos */
+}
+
+.footer-socials a {
+  color: #555;
+  font-size: 1.5rem; /* Tamaño del ícono */
+  transition: color 0.2s;
+}
+
+.footer-socials a:hover {
+  color: #000;
+}
+
+.footer-right {
+  flex: 2; /* Que ocupe más espacio */
+  display: flex;
+  justify-content: space-around; /* Distribuye las columnas */
+  gap: 2rem;
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: capitalize; /* 'Topic' está capitalizado */
+}
+
+.footer-column a {
+  display: block;
+  text-decoration: none;
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    align-items: center;
+    gap: 2rem;
+  }
+  .footer-right {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .footer-left {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    padding: 1rem 0.5rem;
+  }
+  .footer-sitename {
+    font-size: 1.2rem;
+  }
+  .footer-column h4 {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .footer-column a {
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-container {
+    padding: 0.5rem 0.2rem;
+  }
+  .footer-sitename {
+    font-size: 1rem;
+  }
+  .footer-column h4,
+  .footer-column a {
+    font-size: 0.85rem;
+  }
+}

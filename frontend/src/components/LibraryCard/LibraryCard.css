@@ -1,0 +1,160 @@
+/* src/components/LibraryCard/LibraryCard.css */
+
+.library-card-container {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Para el checkbox de selección */
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  border: 2px solid transparent; /* Borde para el estado 'selected' */
+}
+
+.library-card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo cuando la tarjeta está seleccionada */
+.library-card-container.selected {
+  border-color: #007bff; /* Borde azul */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.library-card-image-link {
+  line-height: 0;
+}
+
+.library-card-image {
+  width: 100%;
+  height: 250px; /* Altura fija para la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio */
+}
+
+.library-card-info {
+  padding: 1rem;
+  flex-grow: 1; /* Empuja las acciones hacia abajo */
+}
+
+.library-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+  /* Truncar texto si es muy largo */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.library-card-status {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.library-card-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progress-bar-bg {
+  flex-grow: 1;
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.library-card-progress span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.library-card-actions {
+  display: flex;
+  border-top: 1px solid #f0f0f0;
+}
+
+.btn-action {
+  flex: 1; /* Ocupa la mitad del espacio */
+  padding: 0.8rem;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-action:hover {
+  background-color: #f8f9fa;
+}
+
+.btn-action:disabled {
+  background-color: #f1f1f1;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.edit-btn {
+  color: #007bff; /* Azul */
+  border-right: 1px solid #f0f0f0;
+}
+.edit-btn:hover:not(:disabled) {
+  background-color: #e7f3ff;
+}
+
+.delete-btn {
+  color: #dc3545; /* Rojo, como pediste */
+}
+.delete-btn:hover:not(:disabled) {
+  background-color: #fbebee;
+}
+
+/* Checkbox para selección múltiple */
+.selection-checkbox {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 28px;
+  height: 28px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.library-card-container.selected .selection-checkbox {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.selection-checkbox .check-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+/* Oculta el input real */
+.selection-checkbox input {
+  display: none;
+}
+
+.library-card-hours {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+  margin-top: 0.75rem;
+}

@@ -1,0 +1,15 @@
+/* src/components/StarRating/StarRating.css */
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem; /* Pequeño espacio entre estrellas */
+}
+
+.star {
+  color: #FFD700; /* Color dorado */
+  font-size: 1.2rem; /* Tamaño de las estrellas */
+}
+
+.star.empty {
+  color: #ccc; /* Color para estrellas vacías */
+}

@@ -1,0 +1,166 @@
+/* src/components/GameCard/GameCard.css */
+
+.game-card-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 0; /* Espacio interno para el contenido */
+}
+
+.game-card-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.game-card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.game-card-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.game-card-description {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.game-card-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.game-card-buttons .btn { /* Reutilizamos tus estilos de botón generales */
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  text-decoration: none; /* Para el Link */
+  color: white; /* Para el Link */
+  background-color: #222; /* Para el Link */
+}
+
+.game-card-buttons .btn:hover {
+  background-color: #000;
+}
+
+.game-card-avg-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 600;
+}
+
+.rating-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.game-card-image-container {
+  flex: 1;
+  border-radius: 4px;
+  overflow: hidden; /* Para que la imagen respete los bordes */
+  line-height: 0;
+  cursor: pointer;
+}
+
+/* Probablemente tienes algo como esto */
+.game-card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;  /* <-- 'contain' asegura que la imagen quepa sin cortarse */
+  display: block;
+
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .game-card-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    width: 100%;           /* Cambia a 100% para que no se corte */
+    max-width: 400px;      /* Limita el ancho máximo */
+    margin: 0 auto;        /* Centra la card */
+  }
+  .game-card-container.reverse {
+    flex-direction: column; /* También en móviles */
+  }
+  .game-card-info {
+    order: 2; /* Texto debajo de la imagen en móviles */
+  }
+  .game-card-image-container {
+    order: 1;
+  }
+  .game-card-title {
+    font-size: 2rem;
+  }
+  .game-card-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .game-card-container {
+    max-width: 300px;
+    padding: 1rem 0;
+  }
+  .game-card-title {
+    font-size: 1.3rem;
+  }
+  .game-card-image {
+    height: 180px;
+  }
+  .game-card-buttons {
+    flex-direction: column;
+  }
+  .game-card-buttons .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .game-card-container {
+    max-width: 220px;
+    padding: 0.5rem 0;
+  }
+  .game-card-title {
+    font-size: 1rem;
+  }
+  .game-card-image {
+    height: 120px;
+  }
+}
+
+/* Evita scroll horizontal en móviles */
+@media (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+  .game-category-slider-wrapper,
+  .myGameCategorySwiper {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    overflow-x: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .game-card-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
